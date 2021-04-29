@@ -1,3 +1,5 @@
+// weather icons downloaded from https://www.amcharts.com/free-animated-svg-weather-icons/
+
 const icon = document.querySelector(".js-weather__icon");
 const temperature = document.querySelector(".js-weather__temperature");
 const place = document.querySelector(".js-weather__place");
@@ -13,7 +15,7 @@ function getWeather(lat, lng) {
     }). then(function(json) {
         temperature.innerText = `${Math.floor(json.main.temp)}°`;
         place.innerText = json.name;
-        icon.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}.png`
+        icon.src = `svg/animated/${json.weather[0].icon}.svg`
     })
 }
 
@@ -33,7 +35,7 @@ function handleGeoSuccess(position) {
 }
 
 function handleGeoError() {
-    console.log("Cant access geo location.")
+    console.log("Couldn't access geo-location.")
 }
 
 function askForCoords() {
