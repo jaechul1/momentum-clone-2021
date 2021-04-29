@@ -1,0 +1,45 @@
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+.js-clock {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.js-clock__time {
+  margin-top: 5px;
+  display: flex;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.js-clock__dot {
+  margin: 0px 1px;
+  animation: blink 1.5s steps(1) infinite;
+}
+
+.js-weather {
+  display: flex;
+  align-items: center;
+}
+
+.js-weather__textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

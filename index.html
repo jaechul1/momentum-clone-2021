@@ -8,18 +8,31 @@
     <title>Momentum clone</title>
   </head>
   <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
+    <div class="top-menu">
+      <div class="js-clock">
+        <span class="js-clock__date"></span>
+        <div class="js-clock__time">
+          <span class="js-clock__hour"></span>
+          <span class="js-clock__dot">:</span>
+          <span class="js-clock__minute"></span>
+        </div>
+      </div>
+      <div class="js-weather">
+        <img class="js-weather__icon" src="" />
+        <div class="js-weather__textbox">
+          <span class="js-weather__temperature"></span>
+          <span class="js-weather__place"></span>
+        </div>
+      </div>
     </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-toDoList"></ul>
-    <span class="js-weather"></span>
+    <!-- <form class="js-form form"> -->
+    <!-- <input type="text" placeholder="What is your name?" /> -->
+    <!-- </form> -->
+    <!-- <h4 class="js-greetings greetings"></h4> -->
+    <!-- <form class="js-toDoForm"> -->
+    <!-- <input type="text" placeholder="Write a to do" /> -->
+    <!-- </form> -->
+    <!-- <ul class="js-toDoList"></ul> -->
     <script src="js/clock.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/todo.js"></script>

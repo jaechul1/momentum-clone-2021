@@ -1,4 +1,6 @@
-const weather = document.querySelector(".js-weather");
+const icon = document.querySelector(".js-weather__icon");
+const temperature = document.querySelector(".js-weather__temperature");
+const place = document.querySelector(".js-weather__place");
 
 const API_KEY ="0f42b967f617ff0df8398e0696f140d1";
 const COORDS = "coords";
@@ -9,13 +11,13 @@ function getWeather(lat, lng) {
     ).then(function(response) {
         return response.json()
     }). then(function(json) {
-        const temperature = json.main.temp;
-        const place = json.name;
-        weather.innerText = `${temperature} @ ${place}`;
+        temperature.innerText = `${Math.floor(json.main.temp)}°`;
+        place.innerText = json.name;
+        icon.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}.png`
     })
 }
 
-function saveCoords(coordsObj) {json
+function saveCoords(coordsObj) {
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
 }
 

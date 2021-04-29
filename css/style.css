@@ -1,1 +1,7 @@
 @import "./reset.css";
+@import "./variables.css";
+@import "./top-menu.css";
+
+* {
+  box-sizing: border-box;
+}
