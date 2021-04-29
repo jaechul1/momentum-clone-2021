@@ -1,7 +1,37 @@
 @import "./reset.css";
 @import "./variables.css";
 @import "./top-menu.css";
+@import "./bottom-menu.css";
 
 * {
   box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  padding: 0px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1s linear;
+}
+
+.nshowing {
+  display: none;
 }

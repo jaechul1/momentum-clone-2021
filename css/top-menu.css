@@ -1,8 +1,5 @@
 .top-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 20px;
+  top: 20px;
 }
 
 .js-clock {
@@ -42,4 +39,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 18px;
+  font-weight: 600;
 }

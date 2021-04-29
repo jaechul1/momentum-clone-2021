@@ -1,0 +1,9 @@
+.bottom-menu {
+  bottom: 20px;
+}
+
+.js-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,18 +1,19 @@
+// weather information from https://openweathermap.org/
 // weather icons downloaded from https://www.amcharts.com/free-animated-svg-weather-icons/
 
 const icon = document.querySelector(".js-weather__icon");
 const temperature = document.querySelector(".js-weather__temperature");
 const place = document.querySelector(".js-weather__place");
 
-const API_KEY ="0f42b967f617ff0df8398e0696f140d1";
+const WEATHER_API_KEY ="0f42b967f617ff0df8398e0696f140d1";
 const COORDS = "coords";
 
 function getWeather(lat, lng) {
     fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
-    ).then(function(response) {
-        return response.json()
-    }). then(function(json) {
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${WEATHER_API_KEY}&units=metric`
+    )
+    .then(response => response.json())
+    .then(json => {
         temperature.innerText = `${Math.floor(json.main.temp)}°`;
         place.innerText = json.name;
         icon.src = `svg/animated/${json.weather[0].icon}.svg`
