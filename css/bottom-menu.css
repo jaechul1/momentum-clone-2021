@@ -5,8 +5,9 @@
   align-items: center;
 }
 
-.js-author {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.js-author__name,
+.js-author__url,
+.js-location {
+  font-style: italic;
+  opacity: 0.8;
 }

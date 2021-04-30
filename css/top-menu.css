@@ -29,8 +29,9 @@
 
 .js-weather__place {
   font-size: 14px;
-  opacity: 0.6;
+  opacity: 0.8;
   text-align: right;
   position: relative;
   bottom: 17px;
+  font-style: italic;
 }

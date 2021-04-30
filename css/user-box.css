@@ -1,36 +1,12 @@
+@import "./clock.css";
+
 .user-box {
   position: fixed;
-  top: 25%;
+  top: 30%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.js-clock {
-  font-size: 150px;
-  font-weight: 700;
-}
-
-.js-clock__time {
-  display: flex;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.js-clock__dot {
-  margin: 0px 5px;
-  animation: blink 1.5s steps(1) infinite;
 }
 
 .toggle-box {
@@ -39,8 +15,7 @@
 
 .nameForm,
 .greetings,
-.js-toDoForm,
-.task-box {
+.js-toDoForm {
   display: none;
 }
 
@@ -85,36 +60,15 @@
 }
 
 .js-toDoForm input {
-  padding-bottom: 2px;
+  padding-bottom: 5px;
   font-size: 40px;
 }
 
-.task-box {
-  margin-top: 20px;
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 24px;
-}
-
-.task-box li {
-  font-size: 18px;
-}
-
-.todo-box,
-.done-box {
-  width: 40%;
+.js-toDoList {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.js-toDoList,
-.js-doneList {
-  width: 100%;
-  margin-top: 10px;
-}
-
-li + li {
-  margin-top: 5px;
+  font-size: 24px;
+  width: 60%;
 }

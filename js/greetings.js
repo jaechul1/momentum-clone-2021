@@ -2,10 +2,7 @@ const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
     greeting = document.querySelector(".js-greetings"),
     currentHour = document.querySelector(".js-clock__hour"),
-    doForm = document.querySelector(".js-toDoForm"),
-    doBox = document.querySelector(".task-box"),
-    pending = document.querySelector(".todo-box").querySelector("span"),
-    finished = document.querySelector(".done-box").querySelector("span");
+    doForm = document.querySelector(".js-toDoForm");
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
@@ -43,9 +40,6 @@ function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     doForm.classList.add(SHOWING_CN);
-    pending.innerText = "Pending";
-    doBox.classList.add(SHOWING_CN);
-    finished.innerText = "Finished";
     const timeNow = currentHour.innerText;
     const timeInterval = judgeTime(timeNow);
     greeting.innerText = `Good ${timeInterval}, ${text}.`;

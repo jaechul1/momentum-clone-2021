@@ -1,0 +1,25 @@
+.js-clock {
+  font-size: 150px;
+  font-weight: 700;
+}
+
+.js-clock__time {
+  display: flex;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.js-clock__dot {
+  margin: 0px 5px;
+  animation: blink 1.5s steps(1) infinite;
+}
