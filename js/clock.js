@@ -1,4 +1,3 @@
-const date = document.querySelector(".js-clock__date");
 const hour = document.querySelector(".js-clock__hour");
 const minute =  document.querySelector(".js-clock__minute");
 
@@ -12,11 +11,8 @@ function concatZero(number) {
 
 function getTime() {
     const now = new Date();
-    const month = now.getMonth() + 1;
-    const day = now.getDate();
     const hours = now.getHours();
     const minutes = now.getMinutes();
-    date.innerText = `${month}/${day}`;
     hour.innerText = `${concatZero(hours)}`;
     minute.innerText = `${concatZero(minutes)}`;
 }

@@ -1,6 +1,11 @@
 const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greetings");
+    greeting = document.querySelector(".js-greetings"),
+    currentHour = document.querySelector(".js-clock__hour"),
+    doForm = document.querySelector(".js-toDoForm"),
+    doBox = document.querySelector(".task-box"),
+    pending = document.querySelector(".todo-box").querySelector("span"),
+    finished = document.querySelector(".done-box").querySelector("span");
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
@@ -21,10 +26,29 @@ function askForName() {
     form.addEventListener("submit", handleSubmit);
 }
 
+function judgeTime(text) {
+    const time = parseInt(text);
+    if (5 <= time && time < 12) {
+        return "morning"
+    } else if (12 <= time && time < 17) {
+        return "afternoon"
+    } else if (17 <= time && time < 21) {
+        return "evening"
+    } else {
+        return "night"
+    }
+}
+
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    doForm.classList.add(SHOWING_CN);
+    pending.innerText = "Pending";
+    doBox.classList.add(SHOWING_CN);
+    finished.innerText = "Finished";
+    const timeNow = currentHour.innerText;
+    const timeInterval = judgeTime(timeNow);
+    greeting.innerText = `Good ${timeInterval}, ${text}.`;
 }
 
 function loadName() {

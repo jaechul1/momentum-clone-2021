@@ -1,0 +1,120 @@
+.user-box {
+  position: fixed;
+  top: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.js-clock {
+  font-size: 150px;
+  font-weight: 700;
+}
+
+.js-clock__time {
+  display: flex;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.js-clock__dot {
+  margin: 0px 5px;
+  animation: blink 1.5s steps(1) infinite;
+}
+
+.toggle-box {
+  margin-top: 30px;
+}
+
+.nameForm,
+.greetings,
+.js-toDoForm,
+.task-box {
+  display: none;
+}
+
+.nameForm input,
+.js-toDoForm input {
+  background-color: transparent;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 3px solid rgba(235, 235, 235, 0.5);
+  outline: none;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(235, 235, 235);
+}
+
+.nameForm input::placeholder,
+.js-toDoForm input::placeholder {
+  color: rgba(235, 235, 235, 0.5);
+}
+
+.greetings {
+  font-size: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.showing {
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1s linear;
+}
+
+.js-toDoForm {
+  margin-top: 40px;
+}
+
+.js-toDoForm input {
+  padding-bottom: 2px;
+  font-size: 40px;
+}
+
+.task-box {
+  margin-top: 20px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.task-box li {
+  font-size: 18px;
+}
+
+.todo-box,
+.done-box {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.js-toDoList,
+.js-doneList {
+  width: 100%;
+  margin-top: 10px;
+}
+
+li + li {
+  margin-top: 5px;
+}

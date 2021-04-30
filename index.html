@@ -7,44 +7,66 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum clone</title>
   </head>
-  <body class="nshowing">
+  <body>
     <div class="top-menu menu">
+      <div class="search-box">
+        <span>Search</span>
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="js-weather">
+        <div class="js-weather__box">
+          <img class="js-weather__icon" src="" width="80" height="80" />
+          <span class="js-weather__temperature"></span>
+        </div>
+        <span class="js-weather__place"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-box">
       <div class="js-clock">
-        <span class="js-clock__date"></span>
         <div class="js-clock__time">
           <span class="js-clock__hour"></span>
           <span class="js-clock__dot">:</span>
           <span class="js-clock__minute"></span>
         </div>
       </div>
-      <div class="js-weather">
-        <img class="js-weather__icon" src="" width="50" height="50" />
-        <div class="js-weather__textbox">
-          <span class="js-weather__temperature"></span>
-          <span class="js-weather__place"></span>
+      <div class="toggle-box">
+        <form class="js-form nameForm">
+          <input type="text" placeholder="Username" />
+        </form>
+        <h4 class="js-greetings greetings"></h4>
+      </div>
+      <form class="js-toDoForm">
+        <input type="text" placeholder="Tasks" />
+      </form>
+      <div class="task-box">
+        <div class="todo-box">
+          <span></span>
+          <ul class="js-toDoList"></ul>
+        </div>
+        <div class="done-box">
+          <span></span>
+          <ul class="js-doneList"></ul>
         </div>
       </div>
     </div>
-    <!-- <form class="js-form form"> -->
-    <!-- <input type="text" placeholder="What is your name?" /> -->
-    <!-- </form> -->
-    <!-- <h4 class="js-greetings greetings"></h4> -->
-    <!-- <form class="js-toDoForm"> -->
-    <!-- <input type="text" placeholder="Write a to do" /> -->
-    <!-- </form> -->
-    <!-- <ul class="js-toDoList"></ul> -->
+    
     <div class="bottom-menu menu">
       <div class="js-author">
           <span class="js-author__name"></span>
           <a class="js-author__url" href="#" target="_blank">Visit Page</a>
       </div>
-      <span class="js-title"></span>
       <span class="js-location"></div>
     </div>
+    
     <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/bg.js"></script>
-    <script src="js/weather.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e6b4f2a1ea.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

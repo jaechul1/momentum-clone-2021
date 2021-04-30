@@ -1,44 +1,36 @@
-.top-menu {
-  top: 20px;
+.search-box {
+  position: relative;
+  bottom: 10px;
 }
 
-.js-clock {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.js-clock__time {
-  margin-top: 5px;
-  display: flex;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.js-clock__dot {
-  margin: 0px 1px;
-  animation: blink 1.5s steps(1) infinite;
+.search-box span {
+  margin-right: 5px;
 }
 
 .js-weather {
   display: flex;
+  flex-direction: column;
+}
+
+.js-weather__box {
+  display: flex;
   align-items: center;
 }
 
-.js-weather__textbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 600;
+.js-weather__icon {
+  position: relative;
+  left: 8px;
+}
+
+.js-weather__temperature {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.js-weather__place {
+  font-size: 14px;
+  opacity: 0.6;
+  text-align: right;
+  position: relative;
+  bottom: 17px;
 }
