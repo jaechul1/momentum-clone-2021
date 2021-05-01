@@ -4,6 +4,7 @@
 @import "./top-menu.css";
 @import "./bottom-menu.css";
 @import "./user-box.css";
+@import "./media-query.css";
 
 * {
   box-sizing: border-box;
@@ -41,4 +42,8 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.nshowing {
+  display: none;
 }

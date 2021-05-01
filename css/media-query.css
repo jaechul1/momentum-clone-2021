@@ -1,0 +1,20 @@
+@media (max-width: 800px), (max-height: 600px) {
+  .user-box {
+    top: 20%;
+  }
+  .js-clock {
+    font-size: 130px;
+  }
+  .greetings,
+  .nameForm input {
+    font-size: 36px;
+  }
+  .js-toDoList {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  .js-toDoForm input {
+    padding-bottom: 3px;
+    font-size: 28px;
+  }
+}
