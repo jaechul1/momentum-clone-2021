@@ -1,4 +1,7 @@
 @media (max-width: 800px), (max-height: 600px) {
+  .search-box {
+    width: 20%;
+  }
   .user-box {
     top: 20%;
   }

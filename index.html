@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum clone</title>
   </head>
-  <body class="nshowing">
+  <body class="loading-img">
     <div class="top-menu menu">
-      <div class="search-box">
-        <span>Search</span>
+      <form class="search-box">
         <i class="fas fa-search"></i>
-      </div>
+        <input class="search-box__input" type="text" />
+        <i class="fab fa-google"></i>
+      </form>
       <div class="js-weather">
         <div class="js-weather__box">
-          <img class="js-weather__icon" src="" width="80" height="80" />
+          <img class="js-weather__icon loading-img" src="" width="80" height="80" />
           <span class="js-weather__temperature"></span>
         </div>
         <span class="js-weather__place"></span>
@@ -46,9 +47,12 @@
     <div class="bottom-menu menu">
       <div class="js-author">
           <span class="js-author__name"></span>
-          <a class="js-author__url" href="#" target="_blank">@</a>
+          <a class="js-author__url" href="#" target="_blank"><i class="fas fa-home"></i></a>
       </div>
-      <span class="js-location"></div>
+      <div class="location-box">
+        <a class="js-location__url" href="#" target="_blank"><i class="fas fa-globe"></i></a>
+        <span class="js-location"></div>
+      </div>
     </div>
     
     <script src="js/clock.js"></script>
@@ -56,6 +60,7 @@
     <script src="js/greetings.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/bg.js"></script>
+    <script src="js/search.js"></script>
     <script
       src="https://kit.fontawesome.com/e6b4f2a1ea.js"
       crossorigin="anonymous"

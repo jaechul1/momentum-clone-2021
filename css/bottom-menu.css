@@ -7,7 +7,16 @@
 
 .js-author__name,
 .js-author__url,
-.js-location {
+.js-location,
+.js-location__url {
   font-style: italic;
   opacity: 0.5;
+}
+
+.js-author__url {
+  margin-left: 3px;
+}
+
+.js-location {
+  margin-left: 3px;
 }

@@ -17,6 +17,7 @@ function getWeather(lat, lng) {
         temperature.innerText = `${Math.floor(json.main.temp)}°`;
         place.innerText = json.name;
         icon.src = `svg/animated/${json.weather[0].icon}.svg`
+        icon.classList.remove("loading-img");
     })
 }
 

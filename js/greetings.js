@@ -36,13 +36,19 @@ function judgeTime(text) {
     }
 }
 
+function refreshGreeting(text) {
+    const timeNow = currentHour.innerText;
+    const timeInterval = judgeTime(timeNow);
+    greeting.innerText = `Good ${timeInterval}, ${text}.`;
+}
+
+
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     doForm.classList.add(SHOWING_CN);
-    const timeNow = currentHour.innerText;
-    const timeInterval = judgeTime(timeNow);
-    greeting.innerText = `Good ${timeInterval}, ${text}.`;
+    refreshGreeting(text);
+    setInterval(function() {refreshGreeting(text)}, 1000);
 }
 
 function loadName() {
